@@ -32,6 +32,16 @@
       });
       var infoWindow = new google.maps.InfoWindow({map: map});
     
+    function ToggleLayer() {
+				if (Toggle == "off") {
+					map.overlayMapTypes.setAt(0, overlayWMS);
+					Toggle = "on";
+				} else {
+					map.overlayMapTypes.setAt(0, null);
+					Toggle = "off";
+				}
+			}
+			
       // Try HTML5 geolocation.
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
