@@ -17,6 +17,7 @@
   </head>
   
   <body>
+    <h3>Google Maps</h3>
     <div id="map"></div>
     <script>
 // Note: This example requires that you consent to location sharing when
@@ -40,7 +41,7 @@ function initMap() {
       };
 
       infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
+      infoWindow.setContent('You are here!');
       map.setCenter(pos);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
