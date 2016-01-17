@@ -170,8 +170,6 @@
 		
     <!-- OpenLayers scriptit -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://openlayers.org/en/v3.11.1/build/ol.js"></script>
-    <link rel="stylesheet" href="http://openlayers.org/en/v3.11.1/css/ol.css" type="text/css">
    
     <!-- Toiminnallisuus scriptit -->    
     <script type="text/javascript" src="main.js"></script> 
@@ -188,7 +186,15 @@
         }
       }
     </script>
-
+    <script>
+          var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
 
     <!-- Header osio, johon tulee otsikko ja ehka joki valikko -->
     <div class="container-fluid">
